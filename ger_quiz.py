@@ -7,7 +7,7 @@ number_of_db=1
 rounds=int(input('Enter number of rounds:'))
 print('Number of rounds:',rounds)
 
-if(rounds<=-2):
+if(rounds<=0):
 	print("Invalid number of rounds...exiting")
 	exit()
 if(rounds>20):
