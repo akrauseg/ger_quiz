@@ -1,6 +1,7 @@
-import pymysql 
+import pymysql
 import sys
 import random
+import os
 
 number_of_db=1
 
@@ -16,7 +17,7 @@ if(rounds>20):
 
 
 #set up connection to DB
-con=pymysql.connect(host='localhost',user='root',passwd='BLAH',db='German')
+con=pymysql.connect(host='localhost',user='root',passwd=os.environ.get('DB_PASSWORD'),db='German')
 conn=con.cursor()
 
 #get results from query result tuple
